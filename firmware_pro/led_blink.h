@@ -123,7 +123,7 @@ protected:
 
         case MODE_CFG:
             if (f % 2) {
-                led_bar::set(mask);
+                led_bar::set(mask | 0x01);
                 schedule(t + CFG_ON_TIMEOUT);
             } else {
                 led_bar::off();
@@ -133,7 +133,7 @@ protected:
 
         case MODE_STORE:
             if (f % 2) {
-                led_bar::set(mask);
+                led_bar::set(mask | 0x01);
                 schedule(t + STORE_ON_TIMEOUT);
             } else {
                 led_bar::off();
@@ -143,7 +143,7 @@ protected:
 
         case MODE_NO_SENSOR:
             if (f % 2) {
-                led_bar::set(mask);
+                led_bar::set(0x01);
                 schedule(t + NO_SENSOR_ON_TIMEOUT);
             } else {
                 led_bar::off();
@@ -153,7 +153,7 @@ protected:
 
         case MODE_EMPTY:
             if (f % 2) {
-                led_bar::set(mask);
+                led_bar::set(0x03);
                 schedule(t + EMPTY_ON_TIMEOUT);
             } else {
                 led_bar::off();

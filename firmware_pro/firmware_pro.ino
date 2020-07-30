@@ -50,8 +50,6 @@ void setup() {
 }
 
 unsigned long last_read_time = 0;
-unsigned long last_update = 0;
-int last_val = 0;
 config_t cfg;
 
 struct empty_btn_handler {
@@ -109,14 +107,14 @@ void check_and_print(unsigned long t) {
 
     } else {
         if (sensor::update(t)) {
-            uint16_t v = sensor::value / 100;
-            uint16_t m = 0x03FF >> (10 - v);
+            uint16_t v = cfg.led(sensor::value);
+            uint16_t m = (0x03FC >> (8 - v)) & 0x3FC;
 
             debug(1, pwm::pulse_us, " ", pwm::low_us, " ",
                 pwm::pulse_count, " ", sensor::value, " ", v, " ", m);
 
             if (state == STATE_NORMAL) {
-                if (pwm::pulse_count < 2) {
+                if (!sensor::ready) {
                     led_blink.start(led_blink_t::MODE_NO_SENSOR, t);
                 } else {
                     if (v < 1) {
@@ -186,7 +184,7 @@ void empty_btn_handler::on_hold(unsigned long t) {
 
     if (state == STATE_CFG) {
         cfg.read();
-        cfg.empty(last_val);
+        cfg.empty(sensor::value);
 
         cancel_cfg_timer.schedule(t + CANCEL_TIMEOUT);
 
@@ -207,7 +205,7 @@ void full_btn_handler::on_hold(unsigned long t) {
 
     if (state == STATE_CFG) {
         cfg.read();
-        cfg.full(last_val);
+        cfg.full(sensor::value);
 
         cancel_cfg_timer.schedule(t + CANCEL_TIMEOUT);
 
