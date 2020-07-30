@@ -1,0 +1,268 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED D1
+U 1 1 5F169A9A
+P 5700 2200
+F 0 "D1" H 5800 2300 50  0000 C CNN
+F 1 "LED" H 5693 2325 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 2200 50  0001 C CNN
+F 3 "~" H 5700 2200 50  0001 C CNN
+	1    5700 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5F16B65F
+P 5700 2450
+F 0 "D2" H 5800 2550 50  0000 C CNN
+F 1 "LED" H 5693 2575 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 2450 50  0001 C CNN
+F 3 "~" H 5700 2450 50  0001 C CNN
+	1    5700 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5F16BC49
+P 5700 2700
+F 0 "D3" H 5800 2800 50  0000 C CNN
+F 1 "LED" H 5693 2825 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 2700 50  0001 C CNN
+F 3 "~" H 5700 2700 50  0001 C CNN
+	1    5700 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5F16C2FE
+P 5700 2950
+F 0 "D4" H 5800 3050 50  0000 C CNN
+F 1 "LED" H 5693 3075 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 2950 50  0001 C CNN
+F 3 "~" H 5700 2950 50  0001 C CNN
+	1    5700 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5F16C6DE
+P 5700 3200
+F 0 "D5" H 5800 3300 50  0000 C CNN
+F 1 "LED" H 5693 3325 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 3200 50  0001 C CNN
+F 3 "~" H 5700 3200 50  0001 C CNN
+	1    5700 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5F16CCC8
+P 5700 3450
+F 0 "D6" H 5800 3550 50  0000 C CNN
+F 1 "LED" H 5693 3575 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 3450 50  0001 C CNN
+F 3 "~" H 5700 3450 50  0001 C CNN
+	1    5700 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 5F16D295
+P 5700 3700
+F 0 "D7" H 5800 3800 50  0000 C CNN
+F 1 "LED" H 5693 3825 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 3700 50  0001 C CNN
+F 3 "~" H 5700 3700 50  0001 C CNN
+	1    5700 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 5F16D692
+P 5700 3950
+F 0 "D8" H 5800 4050 50  0000 C CNN
+F 1 "LED" H 5693 4075 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 3950 50  0001 C CNN
+F 3 "~" H 5700 3950 50  0001 C CNN
+	1    5700 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D9
+U 1 1 5F16DAC9
+P 5700 4200
+F 0 "D9" H 5800 4300 50  0000 C CNN
+F 1 "LED" H 5693 4325 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 4200 50  0001 C CNN
+F 3 "~" H 5700 4200 50  0001 C CNN
+	1    5700 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D10
+U 1 1 5F16DF3A
+P 5700 4450
+F 0 "D10" H 5800 4550 50  0000 C CNN
+F 1 "LED" H 5693 4575 50  0001 C CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm" H 5700 4450 50  0001 C CNN
+F 3 "~" H 5700 4450 50  0001 C CNN
+	1    5700 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x11_Male J1
+U 1 1 5F16E646
+P 4650 3300
+F 0 "J1" H 4700 3900 50  0000 C CNN
+F 1 "Conn_01x11_Male" H 4758 3890 50  0001 C CNN
+F 2 "lib:PCBEdge_x11" H 4650 3300 50  0001 C CNN
+F 3 "~" H 4650 3300 50  0001 C CNN
+	1    4650 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3200 5550 3200
+Wire Wire Line
+	4850 3100 5400 3100
+Wire Wire Line
+	5400 3100 5400 2950
+Wire Wire Line
+	5400 2950 5550 2950
+Wire Wire Line
+	4850 3000 5300 3000
+Wire Wire Line
+	5300 3000 5300 2700
+Wire Wire Line
+	5300 2700 5550 2700
+Wire Wire Line
+	4850 2900 5200 2900
+Wire Wire Line
+	5200 2900 5200 2450
+Wire Wire Line
+	5200 2450 5550 2450
+Wire Wire Line
+	4850 2800 5100 2800
+Wire Wire Line
+	5100 2800 5100 2200
+Wire Wire Line
+	5100 2200 5550 2200
+Wire Wire Line
+	4850 3300 5400 3300
+Wire Wire Line
+	5400 3300 5400 3450
+Wire Wire Line
+	5400 3450 5550 3450
+Wire Wire Line
+	4850 3400 5300 3400
+Wire Wire Line
+	5300 3400 5300 3700
+Wire Wire Line
+	5300 3700 5550 3700
+Wire Wire Line
+	4850 3500 5200 3500
+Wire Wire Line
+	5200 3500 5200 3950
+Wire Wire Line
+	5200 3950 5550 3950
+Wire Wire Line
+	4850 3600 5100 3600
+Wire Wire Line
+	5100 3600 5100 4200
+Wire Wire Line
+	5100 4200 5550 4200
+Wire Wire Line
+	4850 3700 5000 3700
+Wire Wire Line
+	5000 3700 5000 4450
+Wire Wire Line
+	5000 4450 5550 4450
+$Comp
+L power:GND #PWR0101
+U 1 1 5F17422E
+P 6000 4600
+F 0 "#PWR0101" H 6000 4350 50  0001 C CNN
+F 1 "GND" H 6005 4427 50  0000 C CNN
+F 2 "" H 6000 4600 50  0001 C CNN
+F 3 "" H 6000 4600 50  0001 C CNN
+	1    6000 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4450 6000 4450
+Wire Wire Line
+	6000 4450 6000 4600
+Wire Wire Line
+	5850 4200 6000 4200
+Wire Wire Line
+	6000 4200 6000 4450
+Connection ~ 6000 4450
+Wire Wire Line
+	5850 3950 6000 3950
+Wire Wire Line
+	6000 3950 6000 4200
+Connection ~ 6000 4200
+Wire Wire Line
+	5850 3700 6000 3700
+Wire Wire Line
+	6000 3700 6000 3950
+Connection ~ 6000 3950
+Wire Wire Line
+	5850 3450 6000 3450
+Wire Wire Line
+	6000 3450 6000 3700
+Connection ~ 6000 3700
+Wire Wire Line
+	5850 3200 6000 3200
+Wire Wire Line
+	6000 3200 6000 3450
+Connection ~ 6000 3450
+Wire Wire Line
+	5850 2950 6000 2950
+Wire Wire Line
+	6000 2950 6000 3200
+Connection ~ 6000 3200
+Wire Wire Line
+	5850 2700 6000 2700
+Wire Wire Line
+	6000 2700 6000 2950
+Connection ~ 6000 2950
+Wire Wire Line
+	5850 2450 6000 2450
+Wire Wire Line
+	6000 2450 6000 2700
+Connection ~ 6000 2700
+Wire Wire Line
+	5850 2200 6000 2200
+Wire Wire Line
+	6000 2200 6000 2450
+Connection ~ 6000 2450
+$Comp
+L power:GND #PWR?
+U 1 1 5F18A887
+P 4900 4600
+F 0 "#PWR?" H 4900 4350 50  0001 C CNN
+F 1 "GND" H 4905 4427 50  0000 C CNN
+F 2 "" H 4900 4600 50  0001 C CNN
+F 3 "" H 4900 4600 50  0001 C CNN
+	1    4900 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3800 4900 3800
+Wire Wire Line
+	4900 3800 4900 4600
+$EndSCHEMATC

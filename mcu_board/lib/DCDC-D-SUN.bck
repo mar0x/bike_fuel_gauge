@@ -1,0 +1,297 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP D-SUN
+D DC/DC Converter Module
+K DC/DC Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0503SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0503SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0505SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0505SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0509SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0509SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0512SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0512SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0515SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0515SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0524SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX0524SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 5V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1203SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1203SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1205SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1205SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1209SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1209SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1212SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1212SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1215SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1215SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1224SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX1224SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 12V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2403SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2403SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2405SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2405SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2409SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2409SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2412SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2412SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2415SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2415SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2424SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX2424SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 24V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4803SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4803SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 3.3V, ±1300mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4805SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4805SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 5V, ±1200mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4809SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4809SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 9V, ±666mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4812SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4812SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 12V, ±500mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4815SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4815SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 15V, ±400mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4824SA
+D XP Power 6W, 1000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+$CMP ITX4824SA-H
+D XP Power 6W, 3000 VDC Isolated DC/DC Converter Module, Fully Regulated Single Output Voltage 24V, ±250mA, 48V Input Voltage, SIP
+K XP_POWER DC/DC isolated Converter module
+F https://www.xppower.com/pdfs/SF_ITX.pdf
+$ENDCMP
+#
+#End Doc Library
