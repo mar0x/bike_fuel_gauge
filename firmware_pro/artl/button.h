@@ -9,19 +9,12 @@ struct default_button_handler {
 };
 
 
-struct default_button_time_traits {
-    static constexpr unsigned long bounce() { return 5; }
-    static constexpr unsigned long hold() { return 500; }
-};
-
-
 template<typename HANDLERS = default_button_handler,
-         typename TIME_TRAITS = default_button_time_traits>
+         unsigned long BOUNCE_MS = 5,
+         unsigned long HOLD_MS = 500>
 struct button : public HANDLERS {
 
     using HANDLERS::HANDLERS;
-
-    using time_traits = TIME_TRAITS;
 
     bool up() const { return !down_; }
     bool down() const { return down_; }
@@ -37,7 +30,7 @@ struct button : public HANDLERS {
 
         if (!bounce_) {
             if (down_ && !hold_ &&
-                t - state_change_time_ >= time_traits::hold())
+                t - state_change_time_ >= HOLD_MS)
             {
                 hold_ = true;
                 this->on_hold(t);
@@ -46,7 +39,7 @@ struct button : public HANDLERS {
             return false;
         }
 
-        if (t - state_change_time_ >= time_traits::bounce()) {
+        if (t - state_change_time_ >= BOUNCE_MS) {
             bounce_ = false;
             state_change_time_ = t;
             if (down_debounced_ != down_) {

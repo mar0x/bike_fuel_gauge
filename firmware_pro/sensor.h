@@ -22,7 +22,7 @@ struct sensor {
             return;
         }
 
-        read_timer.schedule(t + 100);
+        read_timer.schedule(t + 50);
 
         pwm::reset();
         pwm::enable();

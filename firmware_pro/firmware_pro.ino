@@ -3,6 +3,7 @@
 #include "sensor.h"
 #include "config.h"
 #include "led_blink.h"
+#include "filter.h"
 #include "artl/button.h"
 #include "artl/digital_out.h"
 #include "artl/digital_in.h"
@@ -23,12 +24,29 @@ enum {
     STATE_CFG_STORE,
 };
 
-using b_empty = artl::digital_in<4>;
-using b_full = artl::digital_in<2>;
+using b_empty = artl::digital_in<2>;
+using b_full = artl::digital_in<4>;
 
 artl::timer<> cancel_cfg_timer;
+artl::timer<> read_sensor_timer;
 
 uint8_t state = STATE_INTRO;
+
+config_t cfg;
+
+struct empty_btn_handler {
+    void on_down(bool, unsigned long);
+    void on_hold(unsigned long);
+};
+
+struct full_btn_handler {
+    void on_down(bool, unsigned long);
+    void on_hold(unsigned long);
+};
+
+artl::button<empty_btn_handler, 5, 2000> empty_btn;
+artl::button<full_btn_handler, 5, 2000> full_btn;
+filter_t sensor_filter;
 
 void set_state(uint8_t s) {
     debug(2, "state ", s);
@@ -37,33 +55,22 @@ void set_state(uint8_t s) {
 }
 
 void setup() {
+    unsigned long t = millis();
+
     Serial.begin(115200);
 
     sensor::setup();
     led_blink.setup();
 
-    set_state(STATE_INTRO);
+    cfg.read();
 
-    led_blink.start(led_blink_t::MODE_INTRO, millis());
+    read_sensor_timer.schedule(t);
+
+    set_state(STATE_INTRO);
+    led_blink.start(led_blink_t::MODE_INTRO, t);
 
     artl::yield();
 }
-
-unsigned long last_read_time = 0;
-config_t cfg;
-
-struct empty_btn_handler {
-    void on_down(bool, unsigned long) { }
-    void on_hold(unsigned long);
-};
-
-struct full_btn_handler {
-    void on_down(bool, unsigned long) { }
-    void on_hold(unsigned long);
-};
-
-artl::button<empty_btn_handler> empty_btn;
-artl::button<full_btn_handler> full_btn;
 
 void start_cfg(unsigned long t) {
     debug(2, "start_cfg");
@@ -71,7 +78,7 @@ void start_cfg(unsigned long t) {
     set_state(STATE_CFG);
 
     cancel_cfg_timer.schedule(t + CANCEL_TIMEOUT);
-    led_blink.start(led_blink_t::MODE_CFG, t);
+    led_blink.start(led_blink_t::MODE_CFG_START, t);
 }
 
 void store_cfg(unsigned long t) {
@@ -79,11 +86,17 @@ void store_cfg(unsigned long t) {
 
     set_state(STATE_CFG_STORE);
 
-    cfg.store();
-
     cancel_cfg_timer.cancel();
 
-    led_blink.start(led_blink_t::MODE_STORE, t);
+    uint8_t m = led_blink.get_mode() - led_blink_t::MODE_CFG_START;
+
+    if (m < config_t::MAX_LED) {
+        cfg.set(m, sensor_filter);
+        led_blink.start(led_blink_t::MODE_SET_START + m, t);
+    } else {
+        cfg.reset();
+        led_blink.start(led_blink_t::MODE_RESET, t);
+    }
 }
 
 void cancel_cfg(unsigned long) {
@@ -99,32 +112,45 @@ void cancel_cfg(unsigned long) {
     set_state(STATE_NORMAL);
 }
 
-void check_and_print(unsigned long t) {
-    if (t - last_read_time >= 1000) {
-        last_read_time = t;
+void update_led(unsigned long sensor_val, unsigned long t) {
+    if (!sensor::ready) {
+        led_blink.start(led_blink_t::MODE_NO_SENSOR, t);
+        return;
+    }
 
+    uint16_t v = cfg.led(sensor_val);
+    if (v < 1) {
+        led_blink.start(led_blink_t::MODE_EMPTY, t);
+        return;
+    }
+
+    led_blink.set(led_blink.level2mask(v));
+}
+
+void check_sensor(unsigned long t) {
+    if (read_sensor_timer.update(t)) {
         sensor::read(t);
 
-    } else {
-        if (sensor::update(t)) {
-            uint16_t v = cfg.led(sensor::value);
-            uint16_t m = (0x03FC >> (8 - v)) & 0x3FC;
+        return;
+    }
 
-            debug(1, pwm::pulse_us, " ", pwm::low_us, " ",
-                pwm::pulse_count, " ", sensor::value, " ", v, " ", m);
+    if (sensor::update(t)) {
+        read_sensor_timer.schedule(t + 500);
 
-            if (state == STATE_NORMAL) {
-                if (!sensor::ready) {
-                    led_blink.start(led_blink_t::MODE_NO_SENSOR, t);
-                } else {
-                    if (v < 1) {
-                        led_blink.start(led_blink_t::MODE_EMPTY, t);
-                    } else {
-                        led_blink.set(m);
-                        led_blink.cancel();
-                    }
-                }
-            }
+        unsigned long sv = sensor::value;
+
+        if (empty_btn.down() || state == STATE_INTRO) {
+            sv = sensor_filter.update(sv, 0);
+        } else {
+            sv = sensor_filter.update(sv, t);
+        }
+
+        debug(4, pwm::pulse_us, " ", pwm::low_us, " ",
+            pwm::pulse_count, " ", sensor::value, " ", sv, " ",
+            sensor_filter.mean_, " ", sensor_filter.cov_);
+
+        if (state == STATE_NORMAL) {
+            update_led(sv, t);
         }
     }
 }
@@ -132,7 +158,7 @@ void check_and_print(unsigned long t) {
 void loop() {
     unsigned long t = millis();
 
-    check_and_print(t);
+    check_sensor(t);
 
     if (led_blink.update(t)) {
         switch (state) {
@@ -141,7 +167,7 @@ void loop() {
             break;
 
         case STATE_CFG:
-            led_blink.start(led_blink_t::MODE_CFG, t);
+            led_blink.start(led_blink_t::MODE_CFG_START, t);
             break;
 
         case STATE_CFG_STORE:
@@ -160,57 +186,43 @@ void loop() {
     artl::yield();
 }
 
-void on_hold_both(unsigned long t) {
-    switch (state) {
-    case STATE_NORMAL:
-        start_cfg(t);
-        break;
+void empty_btn_handler::on_down(bool down, unsigned long t) {
+    if (down && state == STATE_CFG) {
+        uint8_t m = led_blink.get_mode() - led_blink_t::MODE_CFG_START;
+        const uint8_t cfg_count = led_blink_t::MODE_CFG_END - led_blink_t::MODE_CFG_START;
+        m = (m + 1) % cfg_count;
 
-    case STATE_CFG:
-        store_cfg(t);
-        break;
+        led_blink.start(led_blink_t::MODE_CFG_START + m, t);
+
+        cancel_cfg_timer.schedule(t + CANCEL_TIMEOUT);
     }
 }
 
 void empty_btn_handler::on_hold(unsigned long t) {
     debug(2, "empty::hold");
 
-    if (full_btn.hold()) {
-        on_hold_both(t);
-        return;
+    if (full_btn.hold() && state == STATE_NORMAL) {
+        start_cfg(t);
     }
+}
 
-    if (full_btn.down()) { return; }
-
-    if (state == STATE_CFG) {
-        cfg.read();
-        cfg.empty(sensor::value);
-
+void full_btn_handler::on_down(bool down, unsigned long t) {
+    if (down && state == STATE_CFG) {
         cancel_cfg_timer.schedule(t + CANCEL_TIMEOUT);
-
-        led_blink.start(led_blink_t::MODE_STORE, t);
-        return;
     }
 }
 
 void full_btn_handler::on_hold(unsigned long t) {
     debug(2, "full::hold");
 
-    if (empty_btn.hold()) {
-        on_hold_both(t);
+    if (empty_btn.hold() && state == STATE_NORMAL) {
+        start_cfg(t);
         return;
     }
 
     if (empty_btn.down()) { return; }
 
     if (state == STATE_CFG) {
-        cfg.read();
-        cfg.full(sensor::value);
-
-        cancel_cfg_timer.schedule(t + CANCEL_TIMEOUT);
-
-        led_blink.start(led_blink_t::MODE_STORE, t);
-        return;
+        store_cfg(t);
     }
 }
-
