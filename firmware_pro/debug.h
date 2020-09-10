@@ -5,7 +5,7 @@
 
 #if defined(DEBUG) && defined(HAVE_HWSERIAL1)
 
-static uint8_t debug_level_ = 9;
+static uint8_t debug_level_ = 0;
 
 template<typename T1> void debug__(const T1& a1) {
     Serial.println(a1);

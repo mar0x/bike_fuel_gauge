@@ -54,10 +54,16 @@ void set_state(uint8_t s) {
     state = s;
 }
 
+void start_intro(unsigned long t) {
+    set_state(STATE_INTRO);
+    led_blink.start(led_blink_t::MODE_INTRO, t);
+}
+
 void setup() {
     unsigned long t = millis();
 
     Serial.begin(115200);
+    debug_level_ = 5;
 
     sensor::setup();
     led_blink.setup();
@@ -66,8 +72,7 @@ void setup() {
 
     read_sensor_timer.schedule(t);
 
-    set_state(STATE_INTRO);
-    led_blink.start(led_blink_t::MODE_INTRO, t);
+    start_intro(t);
 
     artl::yield();
 }
