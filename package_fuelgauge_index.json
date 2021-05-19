@@ -18,7 +18,7 @@
             "online": ""
           },
           "url": "https://github.com/mar0x/bike_fuel_gauge/releases/download/package-fuelgauge-1.0.0/fuelgauge-1.0.0.tar.gz",
-          "archiveFileName": "fuelgauge-1.0.0.tag.gz",
+          "archiveFileName": "fuelgauge-1.0.0.tar.gz",
           "checksum": "SHA-256:d566eb99f528cd9b39c720cc1007097d198a505e831f329f7d2be55855c04a41",
           "size": "16589",
           "boards": [
