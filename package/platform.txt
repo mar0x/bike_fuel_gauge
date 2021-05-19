@@ -1,0 +1,2 @@
+name=FuelGauge
+tools.avrdude.path={runtime.tools.avrdude.path}

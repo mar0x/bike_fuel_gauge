@@ -1,0 +1,34 @@
+
+##############################################################
+
+fuelgauge.name=Arduino FuelGauge
+fuelgauge.vid.0=0x2341
+fuelgauge.pid.0=0x803A
+
+fuelgauge.upload.tool=arduino:avrdude
+fuelgauge.upload.protocol=avr109
+fuelgauge.upload.maximum_size=28672
+fuelgauge.upload.maximum_data_size=2560
+fuelgauge.upload.speed=57600
+fuelgauge.upload.disable_flushing=true
+fuelgauge.upload.use_1200bps_touch=true
+fuelgauge.upload.wait_for_upload_port=true
+
+fuelgauge.bootloader.tool=arduino:avrdude
+fuelgauge.bootloader.low_fuses=0xff
+fuelgauge.bootloader.high_fuses=0xd8
+fuelgauge.bootloader.extended_fuses=0xcb
+fuelgauge.bootloader.file=Caterina-Leonardo.hex
+fuelgauge.bootloader.unlock_bits=0x3F
+fuelgauge.bootloader.lock_bits=0x2F
+
+fuelgauge.build.mcu=atmega32u4
+fuelgauge.build.f_cpu=16000000L
+fuelgauge.build.vid=0x2341
+fuelgauge.build.pid=0x803A
+fuelgauge.build.usb_product="Arduino FuelGauge"
+fuelgauge.build.board=AVR_FUELGAUGE
+fuelgauge.build.core=arduino:arduino
+fuelgauge.build.variant=fuelgauge
+fuelgauge.build.extra_flags={build.usb_flags}
+
